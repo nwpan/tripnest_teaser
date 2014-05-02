@@ -31,3 +31,7 @@ gem 'twitter-bootstrap-rails', github: 'seyhunak/twitter-bootstrap-rails', branc
 
 # Use debugger
 gem 'debugger', group: [:development, :test]
+
+group :production do
+  gem 'rails_12factor'
+end
