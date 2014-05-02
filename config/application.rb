@@ -9,11 +9,14 @@ Bundler.require(*Rails.groups)
 module Teaser
   class Application < Rails::Application
 
+    config.assets.initialize_on_precompile = true
+    config.assets.enabled = true
+
     config.assets.paths << Rails.root.join("app", "assets", "javascripts")
     config.assets.paths << Rails.root.join("app", "assets", "stylesheets")
     config.assets.paths << Rails.root.join("app", "assets", "images")
 
-    config.assets.precompile += %w( application.css master.css.erb public.css master_public.css.erb search.css bootstrap_and_overrides.css.less )
+    config.assets.precompile += %w( application.css )
     config.assets.precompile += %w( application.js )
     config.assets.precompile += %w( *.css *.js )
     config.assets.precompile += %w( *.png *.gif *.jpg )
