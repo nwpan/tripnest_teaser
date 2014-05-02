@@ -18,7 +18,6 @@ module Teaser
 
     config.assets.precompile += %w( application.css bootstrap_and_overrides.css )
     config.assets.precompile += %w( application.js bootstrap.js.coffee )
-    config.assets.precompile += %w( *.css *.js )
     config.assets.precompile += %w( *.png *.gif *.jpg )
     config.assets.precompile += %w( *.ttf *.eot *.woff *.svg) # fonts
   end
