@@ -1,5 +1,8 @@
 default: &default
-  adapter: pq
+  adapter: postgresql
+  database: teaserdb_dev
+  username: teaser_dev
+  password: teaser2014
   pool: 5
   timeout: 5000
 
