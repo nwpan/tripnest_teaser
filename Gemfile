@@ -29,6 +29,8 @@ gem 'bootstrap-sass', '~> 3.1.1'
 
 gem 'twitter-bootstrap-rails', github: 'seyhunak/twitter-bootstrap-rails', branch: 'bootstrap3'
 
+gem 'bootstrap_form'
+
 # Use debugger
 gem 'debugger', group: [:development, :test]
 

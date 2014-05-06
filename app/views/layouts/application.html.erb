@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Teaser</title>
+  <title>TripNest</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  <%= yield %>
+  <div id="footer">
+      <div class="container">
+        <p class="muted credit white">&copy; 2014 TripNest, All rights reserved.</p>
+      </div>
+  </div>
 </body>
 </html>

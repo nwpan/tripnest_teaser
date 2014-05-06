@@ -1,0 +1,13 @@
+<%= bootstrap_form_for User.new, remote: true do |f| %>
+  <p>
+    <%= f.text_field :first_name, label: "First Name:" %>
+  </p>
+  <p>
+    <%= f.text_field :last_name, label: "Last Name:" %>
+  </p>
+  <p>
+    <%= f.text_field :email, label: "Email:" %>
+  </p>
+  <%= f.submit "let's connect", :class => "btn btn-primary" %>
+<% end %>
+</div>
