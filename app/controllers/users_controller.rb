@@ -25,7 +25,7 @@ private
   def authenticate
     authenticate_or_request_with_http_basic('Administration') do |username, password|
       md5_of_password = Digest::MD5.hexdigest(password)
-      username == '<%= ENV["HTTP_USER"] %>' && md5_of_password == '<%= ENV["HTTP_PASSWORD"] %>'
+      username == ENV["HTTP_USER"] && md5_of_password == ENV["HTTP_PASSWORD"]
     end
   end
 
