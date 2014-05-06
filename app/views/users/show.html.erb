@@ -1,1 +1,22 @@
-Hello.
+<h4 id="itineraries_heading">Email List</h4>
+<table class="table table-striped table-bordered" id="itineraries_table" width="100%" data-source="<%= trip_path(@trip, format: "datatable") %>">
+  <div id="btn-placeholder" class="btn-group">
+    <%= link_to "Edit", edit_trip_url, 'data-toggle' => 'modal', 'data-target' => '#formModal', :class => "btn btn-primary", remote: true %>
+  </div>
+  <thead>
+    <tr>
+      <th>Email</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+    </tr>
+  </thead>
+  <tbody>
+  <%= @users.each do |user| %>
+    <tr>
+      <td><%= user.email %></td>
+      <td><%= user.first_name %></td>
+      <td><%= user.last_name %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
