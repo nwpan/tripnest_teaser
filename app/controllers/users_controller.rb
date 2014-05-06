@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   before_action :authenticate, except: [:create]
 
   def index
+    @users = User.all
   end
 
   def create
