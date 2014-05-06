@@ -3,7 +3,7 @@ require 'digest'
 class UsersController < ApplicationController
   before_action :authenticate, except: [:create]
 
-  def index
+  def show
     @users = User.all
   end
 
