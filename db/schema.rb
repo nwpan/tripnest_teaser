@@ -11,10 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140506070333) do
+ActiveRecord::Schema.define(version: 20140508155446) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "trackers", force: true do |t|
+    t.string   "ip_address"
+    t.integer  "count"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "trackers", ["ip_address"], name: "index_trackers_on_ip_address", unique: true, using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email"
