@@ -29,7 +29,7 @@ private
     if tracker.count == 0
       Tracker.create(ip_address: request.remote_ip, count: 1)
     else
-      if Time.now.utc-tracker.last.updated_at < 5.minutes
+      if Time.now.utc-tracker.last.updated_at < 5.seconds
         flash[:notice] = nil
         flash[:danger] = "You're doing too that soon."
         respond_to do |format|
