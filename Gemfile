@@ -37,3 +37,7 @@ gem 'debugger', group: [:development, :test]
 group :production do
   gem 'rails_12factor'
 end
+
+gem 'ember-rails'
+gem 'ember-source', '1.5.0' # or the version you need
+gem 'active_model_serializers'
