@@ -12,6 +12,10 @@ body {
   text-align:left;
 }
 
+#footer {
+  text-align: center;
+}
+
 @font-face {
   font-family: 'Open Sans';
   src:url(<%= asset_path 'OpenSans-Light.tiff' %>);
@@ -204,11 +208,12 @@ a:focus {
 
 .content-section {
   padding-top: 100px;
+  padding-bottom: 200px;
 }
 
-@media(min-width:767px) {
+@media(min-width:479px) {
   .content-section {
-    padding-bottom: 250px;
+    padding-bottom: 100px;
   }
 }
 
