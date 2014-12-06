@@ -1,7 +1,9 @@
 source 'https://rubygems.org'
 
+ruby "2.1.5"
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.0'
+gem 'rails', '4.1.8'
 # pg for accessing the db, Postgres!
 gem 'pg'
 # Use SCSS for stylesheets
@@ -27,12 +29,20 @@ gem 'spring',        group: :development
 
 gem 'bootstrap-sass', '~> 3.1.1'
 
-gem 'twitter-bootstrap-rails', github: 'seyhunak/twitter-bootstrap-rails', branch: 'bootstrap3'
+gem 'twitter-bootstrap-rails', github: 'seyhunak/twitter-bootstrap-rails'
 
 gem 'bootstrap_form'
 
-# Use debugger
-gem 'debugger', group: [:development, :test]
+# Thin is a Ruby web server, see: http://www.bigfastblog.com/rubys-eventmachine-part-3-thin
+gem 'thin'
+
+group :development, :test do
+  # rspec BDD testing tool for Ruby
+  gem 'rspec-rails'
+
+  # debugger for Ruby
+  gem 'byebug'
+end
 
 group :production do
   gem 'rails_12factor'
