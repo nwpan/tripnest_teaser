@@ -6,9 +6,9 @@
     <%= f.text_field :last_name, label: "Last Name:" %>
   </p>
   <p>
-    <%= f.text_field :email, label: "Email:" %>
+    <%= f.text_field :email, required: true, label: "Email:" %>
   </p>
-  <%= f.submit "Connect", :class => "btn btn-success" %>
+  <%= f.submit "Connect", class: "btn btn-success" %>
   <span class="form-privacy hidden-xs">Don't worry, we won't share your email with anyone.</span>
 <% end %>
 </div>
