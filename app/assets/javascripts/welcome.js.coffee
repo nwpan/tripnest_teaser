@@ -11,4 +11,11 @@ $ ->
     return
 
   return
+$(window).scroll ->
+  if $(".navbar").offset().top > 50
+    $(".navbar-brand").removeClass("hide")
+    $(".navbar-fixed-top").addClass "top-nav-collapse"
+  else
+    $(".navbar-brand").addClass("hide").fadeIn(350)
+    $(".navbar-fixed-top").removeClass "top-nav-collapse"
 

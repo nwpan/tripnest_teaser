@@ -8,6 +8,25 @@ body {
   /* The html and body elements cannot have any padding or margin. */
 }
 
+.navbar {
+    padding: 20px 0;
+    border-bottom: 0;
+    letter-spacing: 1px;
+    background: 0 0;
+    -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+    -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+    transition: background .5s ease-in-out,padding .5s ease-in-out;
+}
+
+.top-nav-collapse {
+    padding: 0;
+    background-color: #000;
+}
+
+.navbar-custom.top-nav-collapse {
+    border-bottom: 1px solid rgba(255,255,255,.3);
+}
+
 .new_user {
   text-align:left;
 }
@@ -78,7 +97,11 @@ a {
 a:hover,
 a:focus {
   text-decoration: none;
-  color: #ffffff;
+  color: #aeaeae;
+}
+
+.fa-4 {
+  font-size: 7em;
 }
 
 .light {
